@@ -1,6 +1,6 @@
 import React from "react";
-import SideBar from "../ui/common/SideBarComponent";
-import TopBar from "../ui/common/TopBarComponent";
+import SideBar from "../components/common/SideBarComponent";
+import TopBar from "../components/common/TopBarComponent";
 
 type DefaultLayoutProps = {
   children: React.ReactNode;

@@ -1,5 +1,5 @@
 "use client";
-import UserDropdown from "@/ui/common/UserDropdown";
+import UserDropdown from "@/components/common/UserDropdown";
 import { useSidebar } from "@/context/SidebarContext";
 import Image from "next/image";
 import Link from "next/link";
