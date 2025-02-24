@@ -1,5 +1,5 @@
 "use client";
-import UserDropdown from "@/components/common/UserDropdown";
+import DropDown from "@/components/ui/dropdown";
 import { useSidebar } from "@/context/SidebarContext";
 import Image from "next/image";
 import Link from "next/link";
@@ -101,6 +101,7 @@ const AppHeader: React.FC = () => {
           </div>
           {/* <!-- User Area --> */}
           {/* <UserDropdown /> */}
+
         </div>
       </div>
     </header>

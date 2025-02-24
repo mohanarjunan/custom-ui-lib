@@ -1,62 +1,58 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-
 @layer base {
   body {
     @apply relative text-base font-normal z-1 bg-gray-50 font-outfit;
   }
 }
 
+
 @layer components {
   .menu-item {
     @apply relative flex items-center w-full gap-3 px-3 py-2 font-medium rounded-lg text-theme-sm;
   }
   .menu-item-active {
-    @apply bg-brand-50 text-brand-500 dark:bg-brand-500/[0.12] dark:text-brand-400;
+    @apply bg-brand-50 text-brand-500;
   }
   .menu-item-inactive {
-    @apply text-gray-700 hover:bg-gray-100 group-hover:text-gray-700 dark:text-gray-300 dark:hover:bg-white/5 dark:hover:text-gray-300;
+    @apply text-gray-700 hover:bg-gray-100 group-hover:text-gray-700;
   }
   .menu-item-icon {
-    @apply text-gray-500 group-hover:text-gray-700 dark:text-gray-400;
+    @apply text-gray-500 group-hover:text-gray-700;
   }
   .menu-item-icon-active {
-    @apply text-brand-500 dark:text-brand-400;
+    @apply text-brand-500;
   }
   .menu-item-icon-inactive {
-    @apply text-gray-500 group-hover:text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-300;
+    @apply text-gray-500 group-hover:text-gray-700;
   }
 
   .menu-item-arrow {
     @apply relative;
   }
   .menu-item-arrow-active {
-    @apply rotate-180 text-brand-500 dark:text-brand-400;
+    @apply rotate-180 text-brand-500;
   }
   .menu-item-arrow-inactive {
-    @apply text-gray-500 group-hover:text-gray-700 dark:text-gray-400 dark:group-hover:text-gray-300;
+    @apply text-gray-500 group-hover:text-gray-700;
   }
 
   .menu-dropdown-item {
     @apply relative flex items-center gap-3 rounded-lg px-3 py-2.5 text-theme-sm font-medium;
   }
   .menu-dropdown-item-active {
-    @apply bg-brand-50 text-brand-500 dark:bg-brand-500/[0.12] dark:text-brand-400;
+    @apply bg-brand-50 text-brand-500;
   }
   .menu-dropdown-item-inactive {
-    @apply text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/5;
+    @apply text-gray-700 hover:bg-gray-100;
   }
 
   .menu-dropdown-badge {
-    @apply block rounded-full px-2.5 py-0.5 text-xs font-medium uppercase text-brand-500 dark:text-brand-400;
+    @apply block rounded-full px-2.5 py-0.5 text-xs font-medium uppercase text-brand-500;
   }
   .menu-dropdown-badge-active {
-    @apply bg-brand-100 dark:bg-brand-500/20;
+    @apply bg-brand-100;
   }
   .menu-dropdown-badge-inactive {
-    @apply bg-brand-50 group-hover:bg-brand-100 dark:bg-brand-500/15 dark:group-hover:bg-brand-500/20;
+    @apply bg-brand-50 group-hover:bg-brand-100;
   }
 }
 
@@ -93,44 +89,43 @@
 }
 
 
-
 /* third-party libraries CSS */
 .apexcharts-legend-text {
-  @apply !text-gray-700 dark:!text-gray-400;
+  @apply text-gray-700;
 }
 
 .apexcharts-text {
-  @apply !fill-gray-700 dark:!fill-gray-400;
+  @apply fill-gray-700;
 }
 
 .apexcharts-tooltip.apexcharts-theme-light {
-  @apply gap-1 !rounded-lg !border-gray-200 p-3 !shadow-theme-sm dark:!border-gray-800 dark:!bg-gray-900;
+  @apply gap-1 rounded-lg border-gray-200 p-3 shadow-theme-sm;
 }
 
 .apexcharts-tooltip-marker {
-  @apply !mr-1.5 !h-1.5 !w-1.5;
+  @apply mr-1.5 h-1.5 w-1.5;
 }
 .apexcharts-legend-text {
-  @apply !pl-5 !text-gray-700 dark:!text-gray-400;
+  @apply pl-5 text-gray-700;
 }
 .apexcharts-tooltip-series-group {
-  @apply !p-0;
+  @apply p-0;
 }
 .apexcharts-tooltip-y-group {
-  @apply !p-0;
+  @apply p-0;
 }
 .apexcharts-tooltip-title {
-  @apply !mb-0 !border-b-0 !bg-transparent !p-0 !text-[10px] !leading-4 !text-gray-800 dark:!text-white/90;
+  @apply mb-0 border-b-0 bg-transparent p-0 text-[10px] leading-4 text-gray-800;
 }
 .apexcharts-tooltip-text {
-  @apply !text-theme-xs !text-gray-700 dark:!text-white/90;
+  @apply text-theme-xs text-gray-700;
 }
 .apexcharts-tooltip-text-y-value {
-  @apply !font-medium;
+  @apply font-medium;
 }
 
 .apexcharts-gridline {
-  @apply !stroke-gray-100 dark:!stroke-gray-800;
+  @apply stroke-gray-100 ;
 }
 
 .fc .fc-view-harness {
@@ -153,7 +148,7 @@
   @apply gap-2;
 }
 .fc-button-group .fc-button {
-  @apply flex h-10 w-10 items-center justify-center !rounded-lg border border-gray-200 bg-transparent hover:border-gray-200 hover:bg-gray-50 focus:shadow-none active:!border-gray-200 active:!bg-transparent active:!shadow-none dark:border-gray-800 dark:hover:border-gray-800 dark:hover:bg-gray-900 dark:active:!border-gray-800;
+  @apply flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-transparent hover:border-gray-200 hover:bg-gray-50 focus:shadow-none active:border-gray-200 active:bg-transparent active:shadow-none;
 }
 
 .fc-button-group .fc-button.fc-prev-button:before {
@@ -174,31 +169,31 @@
   @apply hidden;
 }
 .fc-addEventButton-button {
-  @apply !rounded-lg !border-0 !bg-brand-500 !px-4 !py-2.5 !text-sm !font-medium hover:!bg-brand-600 focus:!shadow-none;
+  @apply rounded-lg border-0 bg-brand-500 px-4 py-2.5 text-sm font-medium hover:bg-brand-600 focus:shadow-none;
 }
 .fc-toolbar-title {
-  @apply !text-lg !font-medium text-gray-800 dark:text-white/90;
+  @apply text-lg font-medium text-gray-800;
 }
 .fc-header-toolbar.fc-toolbar .fc-toolbar-chunk:last-child {
-  @apply rounded-lg bg-gray-100 p-0.5 dark:bg-gray-900;
+  @apply rounded-lg bg-gray-100 p-0.5;
 }
 .fc-header-toolbar.fc-toolbar .fc-toolbar-chunk:last-child .fc-button {
-  @apply !h-auto !w-auto rounded-md !border-0 bg-transparent !px-5 !py-2 text-sm font-medium text-gray-500 hover:text-gray-700 focus:!shadow-none dark:text-gray-400;
+  @apply h-auto w-auto rounded-md border-0 bg-transparent px-5 py-2 text-sm font-medium text-gray-500 hover:text-gray-700 focus:shadow-none ;
 }
 .fc-header-toolbar.fc-toolbar
   .fc-toolbar-chunk:last-child
   .fc-button.fc-button-active {
-  @apply text-gray-900 bg-white dark:bg-gray-800 dark:text-white;
+  @apply text-gray-900 bg-white ;
 }
 .fc-theme-standard th {
-  @apply !border-x-0 border-t !border-gray-200 bg-gray-50 !text-left dark:!border-gray-800 dark:bg-gray-900;
+  @apply border-x-0 border-t border-gray-200 bg-gray-50 text-left ;
 }
 .fc-theme-standard td,
 .fc-theme-standard .fc-scrollgrid {
-  @apply !border-gray-200 dark:!border-gray-800;
+  @apply border-gray-200 ;
 }
 .fc .fc-col-header-cell-cushion {
-  @apply !px-5 !py-4 text-sm font-medium uppercase text-gray-400;
+  @apply px-5 py-4 text-sm font-medium uppercase text-gray-400;
 }
 .fc .fc-daygrid-day.fc-day-today {
   @apply bg-transparent;
@@ -207,19 +202,19 @@
   @apply p-2;
 }
 .fc .fc-daygrid-day.fc-day-today .fc-scrollgrid-sync-inner {
-  @apply rounded bg-gray-100 dark:bg-white/[0.03];
+  @apply rounded bg-gray-100;
 }
 .fc .fc-daygrid-day-number {
-  @apply !p-3 text-sm font-medium text-gray-700 dark:text-gray-400;
+  @apply p-3 text-sm font-medium text-gray-700 ;
 }
 .fc .fc-daygrid-day-top {
-  @apply !flex-row;
+  @apply flex-row;
 }
 .fc .fc-day-other .fc-daygrid-day-top {
   opacity: 1;
 }
 .fc .fc-day-other .fc-daygrid-day-top .fc-daygrid-day-number {
-  @apply text-gray-400 dark:text-white/30;
+  @apply text-gray-400/30;
 }
 .event-fc-color {
   @apply rounded-lg py-2.5 pl-4 pr-3;
@@ -234,7 +229,7 @@
   @apply focus:shadow-none;
 }
 .fc-daygrid-event.fc-event-start {
-  @apply !ml-3;
+  @apply ml-3;
 }
 .event-fc-color.fc-bg-success {
   @apply border-success-50 bg-success-50;
@@ -261,10 +256,10 @@
   @apply bg-orange-500;
 }
 .fc-direction-ltr .fc-timegrid-slot-label-frame {
-  @apply px-3 py-1.5 text-left text-sm font-medium text-gray-500 dark:text-gray-400;
+  @apply px-3 py-1.5 text-left text-sm font-medium text-gray-500 ;
 }
 .fc .fc-timegrid-axis-cushion {
-  @apply text-sm font-medium text-gray-500 dark:text-gray-400;
+  @apply text-sm font-medium text-gray-500 ;
 }
 .custom-calendar .fc-h-event {
   background-color: transparent;
@@ -288,22 +283,22 @@
 
 .stocks-slider-outer .swiper-button-next,
 .stocks-slider-outer .swiper-button-prev {
-  @apply !static mt-0 h-8 w-9 rounded-full border dark:hover:bg-white/[0.05] border-gray-200 !text-gray-700 transition hover:bg-gray-100 dark:border-white/[0.03] dark:bg-gray-800 dark:!text-gray-400  dark:hover:!text-white/90;
+  @apply static mt-0 h-8 w-9 rounded-full border dark:hover:bg-white/[0.05] border-gray-200 text-gray-700 transition hover:bg-gray-100;
 }
 
 .stocks-slider-outer .swiper-button-next.swiper-button-disabled,
 .stocks-slider-outer .swiper-button-prev.swiper-button-disabled {
-  @apply bg-white opacity-50 dark:bg-gray-900;
+  @apply bg-white opacity-50;
 }
 
 .stocks-slider-outer .swiper-button-next svg,
 .stocks-slider-outer .swiper-button-prev svg {
-  @apply !h-auto !w-auto;
+  @apply h-auto w-auto;
 }
 
 .swiper-button-prev svg,
 .swiper-button-next svg {
-  @apply !h-auto !w-auto;
+  @apply h-auto w-auto;
 }
 
 .carouselTwo .swiper-button-next:after,
@@ -316,33 +311,33 @@
 .carouselTwo .swiper-button-prev.swiper-button-disabled,
 .carouselFour .swiper-button-next.swiper-button-disabled,
 .carouselFour .swiper-button-prev.swiper-button-disabled {
-  @apply bg-white/60 !opacity-100;
+  @apply bg-white/60 opacity-100;
 }
 .carouselTwo .swiper-button-next,
 .carouselTwo .swiper-button-prev,
 .carouselFour .swiper-button-next,
 .carouselFour .swiper-button-prev {
-  @apply h-10 w-10 rounded-full border-[0.5px] border-white/10 bg-white/90 !text-gray-700 shadow-slider-navigation backdrop-blur-[10px];
+  @apply h-10 w-10 rounded-full border-[0.5px] border-white/10 bg-white/90 text-gray-700 shadow-slider-navigation backdrop-blur-[10px];
 }
 
 .carouselTwo .swiper-button-prev,
 .carouselFour .swiper-button-prev {
-  @apply !left-3 sm:!left-4;
+  @apply left-3 sm:left-4;
 }
 
 .carouselTwo .swiper-button-next,
 .carouselFour .swiper-button-next {
-  @apply !right-3 sm:!right-4;
+  @apply right-3 sm:right-4;
 }
 
 .carouselThree .swiper-pagination,
 .carouselFour .swiper-pagination {
-  @apply !bottom-3 !left-1/2 inline-flex !w-auto -translate-x-1/2 items-center gap-1.5 rounded-[40px] border-[0.5px] border-white/10 bg-white/60 px-2 py-1.5 shadow-slider-navigation backdrop-blur-[10px] sm:!bottom-5;
+  @apply bottom-3 left-1/2 inline-flex w-auto -translate-x-1/2 items-center gap-1.5 rounded-[40px] border-[0.5px] border-white/10 bg-white/60 px-2 py-1.5 shadow-slider-navigation backdrop-blur-[10px] sm:bottom-5;
 }
 
 .carouselThree .swiper-pagination-bullet,
 .carouselFour .swiper-pagination-bullet {
-  @apply !m-0 h-2.5 w-2.5 bg-white opacity-100 shadow-theme-xs duration-200 ease-in-out;
+  @apply m-0 h-2.5 w-2.5 bg-white opacity-100 shadow-theme-xs duration-200 ease-in-out;
 }
 
 .carouselThree .swiper-pagination-bullet-active,
@@ -351,20 +346,20 @@
 }
 
 .jvectormap-container {
-  @apply !bg-gray-50 dark:!bg-gray-900;
+  @apply bg-gray-50;
 }
 .jvectormap-region.jvectormap-element {
-  @apply !fill-gray-300 hover:!fill-brand-500 dark:!fill-gray-700 dark:hover:!fill-brand-500;
+  @apply fill-gray-300 hover:fill-brand-500 dark:fill-gray-700 dark:hover:fill-brand-500;
 }
 .jvectormap-marker.jvectormap-element {
-  @apply !stroke-gray-200 dark:!stroke-gray-800;
+  @apply stroke-gray-200 dark:stroke-gray-800;
 }
 .jvectormap-tip {
-  @apply !bg-brand-500 !border-none !px-2 !py-1;
+  @apply bg-brand-500 border-none px-2 py-1;
 }
 .jvectormap-zoomin,
 .jvectormap-zoomout {
-  @apply !hidden;
+  @apply hidden;
 }
 
 .form-check-input:checked ~ span {
@@ -392,6 +387,3 @@
   opacity: 0.8;
   cursor: grabbing; /* Changes the cursor to indicate dragging */
 }
-
-
-/* @import "../ui/css/_main" */
