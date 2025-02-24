@@ -1,9 +1,5 @@
 @use "./tailwind";
 @use "./lib";
 
+// Components
 @use "./_dropdown.scss";
-
-
-* {
-  @apply focus:outline-none focus:ring-blue-500;
-}

@@ -1,8 +1,5 @@
 "use client";
-import DropDown from "@/components/ui/dropdown";
 import { useSidebar } from "@/context/SidebarContext";
-import Image from "next/image";
-import Link from "next/link";
 import React, { useState } from "react";
 
 const AppHeader: React.FC = () => {

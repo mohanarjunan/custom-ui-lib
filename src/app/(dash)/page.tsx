@@ -1,14 +1,32 @@
+"use client"
+
 import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
-import DropDown from "@/components/ui/dropdown";
-import { Form } from "radix-ui";
+import { SingleSelect } from "@/components/ui/select";
+import { OptionType, SelectOptionType } from "@/components/ui/select/type";
+import { useState } from "react";
 
 export default function Page () {
+  
+  const [state, setState] = useState<OptionType>({
+    key: "",
+    value: ""
+  })
+
+  const states: SelectOptionType = [
+    { key: "TN", value: "Tamil Nadu" },
+    { key: "AN", value: "Andra Pradesh"},
+  ]
+
+  const handleStateSelection = (option: OptionType) => {
+    setState(option);
+  }
+  
   return (
     <>
       <PageBreadcrumb pageTitle="Notification" />
       <ComponentCard title="Content" desc="Description" >
-        <DropDown />
+        <SingleSelect  className="w-64" options={states} onSelect={handleStateSelection} placeHolder="Select" selected={state} />
       </ComponentCard>
     </>
   )

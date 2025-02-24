@@ -1,1 +1,6 @@
-@use "../scss/_main.scss"
+@use "../scss/_main.scss";
+
+// Global
+* {
+  @apply focus:outline-none focus:ring-blue-500;
+}

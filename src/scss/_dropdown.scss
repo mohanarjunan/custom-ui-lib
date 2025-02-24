@@ -1,3 +1,9 @@
-.dropdown-item {
-  @apply text-sm px-2 py-2 hover:bg-slate-100 rounded-md transition-all duration-300 ease-in-out outline-none cursor-pointer;
+.single-select {
+  &--trigger {
+    @apply inline-flex items-center justify-between rounded-lg bg-white border border-gray-300 px-4 py-2 text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  &--item {
+    @apply text-sm px-2 py-2 hover:bg-blue-100 rounded-md transition-all duration-300 ease-in-out outline-none cursor-pointer w-full flex justify-between items-center; 
+  }
 }
