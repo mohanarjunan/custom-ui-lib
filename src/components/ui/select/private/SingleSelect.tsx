@@ -3,13 +3,13 @@
 import React, { useState } from 'react'
 import { DropdownMenu } from 'radix-ui'
 import { Check, ChevronDown } from 'lucide-react'
-import { OptionType, SelectOptionType } from '../type';
+import { OptionType } from '../type';
 
 
 interface SingleSelectProps {
-  selected: OptionType;
-  options: SelectOptionType;
-  onSelect: (option: OptionType) => void;
+  selected: string;
+  options: OptionType;
+  onSelect: (option: string) => void;
   placeHolder: string;
   className?: string;
 }
@@ -32,29 +32,28 @@ export const SingleSelect = ( {
     <DropdownMenu.Root open={isOpen} onOpenChange={handleToggle}>
       <DropdownMenu.Trigger asChild>
         <button className={`single-select--trigger ${className}`}>
-          { selected?.value || placeHolder }
-          <ChevronDown className="ml-2 h-5 w-5 text-gray-500" />
+          { selected || placeHolder }
+          <ChevronDown className="single-select--chevron" />
         </button>
       </DropdownMenu.Trigger>
 
       <DropdownMenu.Portal>
         <DropdownMenu.Content
-          className="w-[var(--radix-dropdown-menu-trigger-width)] rounded-lg border border-gray-200 bg-white p-2 shadow-sm"
+          className="single-select--content"
           sideOffset={2}
         >
           {options.map((option) => (
             <DropdownMenu.Item
-              key={option.key}
+              key={option}
               onSelect={() => onSelect(option)}
               className={`single-select--item ${
-                selected.key === option.key ? "font-medium text-blue-600" : ""
+                selected === option ? "single-select--selected" : ""
               }`}
             >
-              {option.value}
-              {selected.key === option.key && <Check className="w-4 h-4 text-blue-600" />}
+              {option}
+              {selected === option && <Check className="single-select--check" />}
             </DropdownMenu.Item>
           ))}
-          <DropdownMenu.Arrow className='fill-gray-200' />
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
     </DropdownMenu.Root>

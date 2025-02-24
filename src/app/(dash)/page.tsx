@@ -2,31 +2,29 @@
 
 import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
-import { SingleSelect } from "@/components/ui/select";
-import { OptionType, SelectOptionType } from "@/components/ui/select/type";
+import { MultiSelect, SingleSelect } from "@/components/ui/select";
+import { OptionType } from "@/components/ui/select/type";
 import { useState } from "react";
 
 export default function Page () {
   
-  const [state, setState] = useState<OptionType>({
-    key: "",
-    value: ""
-  })
+  const [state, setState] = useState<OptionType>([])
 
-  const states: SelectOptionType = [
-    { key: "TN", value: "Tamil Nadu" },
-    { key: "AN", value: "Andra Pradesh"},
+
+  const states: OptionType = [
+    "Tamil Nadu", "Karnataka", "Goa", "Kerala"
   ]
 
-  const handleStateSelection = (option: OptionType) => {
-    setState(option);
+  const handleSelect = (option: OptionType) => {
+    setState(option)
   }
   
-  return (
+  return (  
     <>
       <PageBreadcrumb pageTitle="Notification" />
       <ComponentCard title="Content" desc="Description" >
-        <SingleSelect  className="w-64" options={states} onSelect={handleStateSelection} placeHolder="Select" selected={state} />
+        <MultiSelect  options={states}  onChange={handleSelect} selected={state} placeHolder="Select"/>
+        {/* <SingleSelect className="w-64" options={states}  onSelect={handleSelect} selected={state} placeHolder="Select"/> */}
       </ComponentCard>
     </>
   )

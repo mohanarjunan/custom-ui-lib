@@ -1,0 +1,56 @@
+.single-select {
+  &--trigger {
+    @apply inline-flex items-center justify-between rounded-lg bg-white border border-gray-300 px-4 py-2 text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  &--item {
+    @apply text-sm px-2 py-2 hover:bg-blue-100 rounded-md transition-all duration-300 ease-in-out outline-none cursor-pointer w-full flex justify-between items-center; 
+  }
+
+  &--chevron {
+    @apply ml-2 h-5 w-5 text-gray-500;
+  }
+
+  &--content {
+    @apply  w-[var(--radix-dropdown-menu-trigger-width)] rounded-lg border border-gray-200 bg-white p-2 shadow-sm;
+  }
+
+  &--selected {
+    @apply font-medium text-blue-600;
+  }
+
+  &--check {
+    @apply w-4 h-4 text-blue-600;
+  }
+
+  &--arrow {
+    @apply fill-gray-200;
+  }
+
+}
+
+.multi-select {
+  &--trigger {
+    @apply  inline-flex items-center justify-between rounded-lg bg-white border border-gray-300 px-4 py-2 text-gray-700 shadow-sm hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-blue-500;
+  }
+
+  &--info {
+    @apply flex items-center gap-1 bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-xs;
+  }
+
+  &--tag {
+    @apply flex items-center gap-1 bg-blue-100 text-blue-700 px-2 py-1 rounded-md text-xs;
+  }
+
+  &--chevron {
+    @apply ml-auto h-4 w-4 text-gray-500 transition-all duration-300 ease-in-out;
+  }
+
+  &--content {
+    @apply  w-[var(--radix-dropdown-menu-trigger-width)] rounded-lg border border-gray-200 bg-white p-2 shadow-sm;
+  }
+
+  &--item {
+    @apply text-sm px-2 py-2 hover:bg-blue-100 rounded-md transition-all duration-300 ease-in-out outline-none cursor-pointer w-full flex gap-2 items-center; 
+  }
+}

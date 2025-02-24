@@ -2,4 +2,7 @@
 @use "./lib";
 
 // Components
-@use "./_dropdown.scss";
+@use "./select";
+
+// Utils
+@use "./scrollbar"
