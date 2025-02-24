@@ -2,8 +2,8 @@
 
 import ComponentCard from "@/components/common/ComponentCard";
 import PageBreadcrumb from "@/components/common/PageBreadCrumb";
-import { MultiSelect, SingleSelect } from "@/components/ui/select";
-import { OptionType } from "@/components/ui/select/type";
+import { MultiSelect, SingleSelect } from "@/components/ui/dropdown";
+import { OptionType } from "@/components/ui/dropdown/type";
 import { useState } from "react";
 
 export default function Page () {

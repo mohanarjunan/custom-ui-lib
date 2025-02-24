@@ -17,7 +17,7 @@ const ComponentCard: React.FC<ComponentCardProps> = ({
 }) => {
   return (
     <div
-      className={`rounded-xl border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] ${className}`}
+      className={`rounded-lg border border-gray-200 bg-white dark:border-gray-800 dark:bg-white/[0.03] ${className}`}
     >
       {/* Card Header */}
       <div className={`px-6 pt-5 ${divider ? 'pb-5' : ''}`}>
