@@ -1,5 +1,5 @@
-import ComponentCard from "@/components/common/ComponentCard";
-import PageBreadcrumb from "@/components/common/PageBreadCrumb";
+import ComponentCard from "@/components/common/private/ComponentCard";
+import PageBreadcrumb from "@/components/common/private/PageBreadCrumb";
 
 export default function Page() {
   return <>

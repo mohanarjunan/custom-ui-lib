@@ -133,7 +133,7 @@ function SelectedItems ({ options }: any ){
           <Popover.Content className="border shadow-sm bg-white px-8 py-2 w-[200px] rounded-md text-sm">
               <ul className="list-disc">
                 {options.map((option: string) => (
-                  <li className="">{option}</li>
+                  <li key={option} className="">{option}</li>
                 )) }
               </ul>
             <Popover.Arrow className="fill-gray-400"/>
