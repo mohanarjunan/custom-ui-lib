@@ -1,0 +1,51 @@
+name: Update Folder Structure in README
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Install tree
+        run: sudo apt-get install tree
+
+      - name: Generate folder structure
+        run: |
+          tree --gitignore > structure.txt
+
+      - name: Update README.md
+        run: |
+          START="<!-- FOLDER-STRUCTURE-START -->"
+          END="<!-- FOLDER-STRUCTURE-END -->"
+          CONTENT="\`\`\`\n$(cat structure.txt)\n\`\`\`"
+
+          awk -v start="$START" -v end="$END" -v content="$CONTENT" '
+          BEGIN {print_output=1}
+          {
+            if ($0 ~ start) {
+              print $0
+              print content
+              print_output=0
+            } else if ($0 ~ end) {
+              print $0
+              print_output=1
+            } else if (print_output) {
+              print $0
+            }
+          }' README.md > README.tmp && mv README.tmp README.md
+
+      - name: Clean up
+        run: rm -f folder-structure.txt
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: update folder structure in README"

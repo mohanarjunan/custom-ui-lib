@@ -1,5 +1,5 @@
 
-## Getting Started
+## 🪄 Getting Started
 
 First, run the development server:
 
@@ -14,3 +14,9 @@ bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## 🌳 Tree Structure
+
+<!-- FOLDER-STRUCTURE-START -->
+(Will be auto-updated by GitHub Action)
+<!-- FOLDER-STRUCTURE-END -->
