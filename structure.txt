@@ -1,0 +1,27 @@
+.
+├── doc.txt
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── images
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── README.md
+├── src
+│   ├── app
+│   ├── components
+│   ├── context
+│   ├── hooks
+│   ├── layout
+│   └── scss
+├── structure.txt
+├── tailwind.config.ts
+└── tsconfig.json
+
+10 directories, 15 files

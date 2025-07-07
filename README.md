@@ -34,3 +34,65 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Folder Structure
+```
+.
+├── doc.txt
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── images
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── README.md
+├── src
+│   ├── app
+│   ├── components
+│   ├── context
+│   ├── hooks
+│   ├── layout
+│   └── scss
+├── structure.txt
+├── tailwind.config.ts
+└── tsconfig.json
+
+10 directories, 15 files
+```
+
+## Folder Structure
+```
+.
+├── doc.txt
+├── next.config.ts
+├── next-env.d.ts
+├── package.json
+├── package-lock.json
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── images
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── README.md
+├── src
+│   ├── app
+│   ├── components
+│   ├── context
+│   ├── hooks
+│   ├── layout
+│   └── scss
+├── structure.txt
+├── tailwind.config.ts
+└── tsconfig.json
+
+10 directories, 15 files
+```
