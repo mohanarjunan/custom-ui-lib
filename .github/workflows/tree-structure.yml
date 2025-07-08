@@ -50,11 +50,10 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
 
-
       - name: Commit changes
         run: |
           git add README.md
-          git commit -m "Update folder structure in README" || echo "No changes to commit"
+          git commit -m "TreeStructure Update in README" || echo "No changes to commit"
       
       - name: Push changes
         run: |
